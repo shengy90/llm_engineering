@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "llm-engineering"
+version = "0.1.0"
+description = ""
+authors = ["Shengy <shengy90@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11, <3.13"
+numpy = "<2.0"
+chromadb = "<0.6.0"
+scipy = "<1.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
