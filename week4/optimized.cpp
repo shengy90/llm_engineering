@@ -2,14 +2,15 @@
 #include <vector>
 #include <chrono>
 #include <limits>
+#include <cstdint>
 #include <iomanip>
 
 class LCG {
 private:
     uint64_t value;
-    const uint64_t a = 1664525;
-    const uint64_t c = 1013904223;
-    const uint64_t m = 1ULL << 32;
+    static constexpr uint64_t a = 1664525;
+    static constexpr uint64_t c = 1013904223;
+    static constexpr uint64_t m = 1ULL << 32;
 
 public:
     LCG(uint64_t seed) : value(seed) {}
@@ -22,15 +23,15 @@ public:
 
 int64_t max_subarray_sum(int n, uint64_t seed, int min_val, int max_val) {
     LCG lcg(seed);
-    std::vector<int> random_numbers(n);
+    std::vector<int64_t> random_numbers(n);
     for (int i = 0; i < n; ++i) {
-        random_numbers[i] = static_cast<int>(lcg.next() % (max_val - min_val + 1) + min_val);
+        random_numbers[i] = static_cast<int64_t>(lcg.next() % (max_val - min_val + 1) + min_val);
     }
 
     int64_t max_sum = std::numeric_limits<int64_t>::min();
     int64_t current_sum = 0;
     for (int i = 0; i < n; ++i) {
-        current_sum = std::max(static_cast<int64_t>(random_numbers[i]), current_sum + random_numbers[i]);
+        current_sum = std::max(current_sum + random_numbers[i], random_numbers[i]);
         max_sum = std::max(max_sum, current_sum);
     }
     return max_sum;
