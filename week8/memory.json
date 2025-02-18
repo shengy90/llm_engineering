@@ -34,5 +34,14 @@
     },
     "estimate": 2081.647127763905,
     "discount": 782.6471277639048
+  },
+  {
+    "deal": {
+      "product_description": "The Unlocked Samsung Galaxy S24+ Android Smartphone combines cutting-edge technology with a sleek design. Users can experience high performance with its powerful processor and vibrant display, perfect for gaming and multimedia consumption. The phone provides expansive storage options and excellent camera capabilities, making it ideal for photography enthusiasts. It's unlocked, allowing for carrier flexibility, and offers a substantial value for those looking to upgrade their mobile experience.",
+      "price": 500.0,
+      "url": "https://www.dealnews.com/Unlocked-Samsung-Galaxy-S24-Android-Smartphone-Up-to-500-off-w-trade-free-shipping/21719333.html?iref=rss-c142"
+    },
+    "estimate": 862.6186558083764,
+    "discount": 362.6186558083764
   }
 ]
